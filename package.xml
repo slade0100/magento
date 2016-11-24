@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.7.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Pz_WorldMap</name>
+ <channel>connect.magentocommerce.com/community</channel>
+ <summary>Customer online map and Widgets for Google Map</summary>
+ <description>Online user&apos;s world map, show who is online and where they are.
+
+Widget for google map.
+
+
+ </description>
+ <lead>
+  <name>Cheng Wei</name>
+  <user>customer</user>
+  <email>berlios.o@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-07-03</date>
+ <time>15:20:44</time>
+ <version>
+  <release>1.1.2</release>
+  <api>1.0</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://opensource.org/licenses/afl-3.0.php">Academic Free License (AFL 3.0)</license>
+ <notes>v 1.1.2
+ enable ip detect for shell scripts
+
+v 1.1.1
+ fix issue of region map in back end
+
+v 1.1.0:
+ fix locale issue
+
+v 1.0.9:
+ fix router in admin
+
+v 1.0.8:
+ change google map api loader style
+
+v 1.0.7:
+ fix issue of marker cluster
+
+v 1.0.6:
+ update google map api to version 3
+
+v 1.0.5:
+ issue in short tag
+
+v 1.0.3:
+ issue in https fixed
+
+v 1.0.2:
+ some issue fixed
+
+v 1.0.0:
+ 1) convert FIPS 10-4 region code to ISO 3166:2 region code
+ 2) show markers map in backend
+ 3) enable widget for google map
+
+
+v 0.9:
+ add Net_GeoIP in to source for easy installation
+
+v 0.8:
+  1) add configuration for GeoIP data file 
+  2) check online customer from log
+  3) use Net_GeoIP for IP location detect
+
+v 0.7:
+  add support for &apos;GeoIpCity.dat&apos;
+
+v 0.6:
+  change default design/template
+
+v 0.5:
+  first release package</notes>
+ <contents>
+  <dir name="/">
+   <dir name="adminhtml">
+    <dir name="default">
+     <dir name="default">
+      <dir name="images">
+       <file md5sum="8f33bab9b0c154462489b35140f29fae" name="customer-flag.png" role="mageskin" />
+       <file md5sum="47c715944bf946fd0cd9528cd8a016ae" name="guest-flag.png" role="mageskin" />
+      </dir> <!-- /adminhtml/default/default/images -->
+      <dir name="layout">
+       <file md5sum="3fab0c27e33a33a0b86a258af59566d6" name="worldmap.xml" role="magedesign" />
+      </dir> <!-- /adminhtml/default/default/layout -->
+      <dir name="template">
+       <dir name="worldmap\info">
+        <file md5sum="090e5dd9fbf704864c0c5488fa5c6fbe" name="geomap.phtml" role="magedesign" />
+       </dir> <!-- /adminhtml/default/default/template/worldmap\info -->
+       <dir name="worldmap\map">
+        <file md5sum="09af492944ab3d363371f271db2da59c" name="country.phtml" role="magedesign" />
+        <file md5sum="834af87c67cf2f14dacf03a175d57788" name="marker.phtml" role="magedesign" />
+        <file md5sum="65216785a0a95545890273b2ef314c96" name="region.phtml" role="magedesign" />
+       </dir> <!-- /adminhtml/default/default/template/worldmap\map -->
+       <dir name="worldmap\page">
+        <file md5sum="0845e0a7a2d3f323164ebace4d924458" name="head.phtml" role="magedesign" />
+       </dir> <!-- /adminhtml/default/default/template/worldmap\page -->
+       <dir name="worldmap\widget\map">
+        <file md5sum="288254500d326f7666d98667c43ca2a1" name="selector.phtml" role="magedesign" />
+       </dir> <!-- /adminhtml/default/default/template/worldmap\widget\map -->
+       <dir name="worldmap\widget\marker">
+        <file md5sum="1f3708de3e776a59ab32b123df50b15b" name="container.phtml" role="magedesign" />
+       </dir> <!-- /adminhtml/default/default/template/worldmap\widget\marker -->
+      </dir> <!-- /adminhtml/default/default/template -->
+     </dir> <!-- /adminhtml/default/default -->
+    </dir> <!-- /adminhtml/default -->
+   </dir> <!-- /adminhtml -->
+   <dir name="frontend">
+    <dir name="base">
+     <dir name="default">
+      <dir name="images">
+       <file md5sum="8f33bab9b0c154462489b35140f29fae" name="customer-flag.png" role="mageskin" />
+       <file md5sum="47c715944bf946fd0cd9528cd8a016ae" name="guest-flag.png" role="mageskin" />
+      </dir> <!-- /frontend/base/default/images -->
+      <dir name="layout">
+       <file md5sum="3125174c306ac57e2a31b554b2a5666b" name="worldmap.xml" role="magedesign" />
+      </dir> <!-- /frontend/base/default/layout -->
+      <dir name="template">
+       <dir name="worldmap">
+        <file md5sum="98c21afd0f5000a45b3cd5983a2b7619" name="map.phtml" role="magedesign" />
+        <file md5sum="c9c1af2b4d0dca3496275aa646ff300d" name="online.phtml" role="magedesign" />
+       </dir> <!-- /frontend/base/default/template/worldmap -->
+      </dir> <!-- /frontend/base/default/template -->
+     </dir> <!-- /frontend/base/default -->
+    </dir> <!-- /frontend/base -->
+   </dir> <!-- /frontend -->
+   <dir name="js">
+    <dir name="map">
+     <file md5sum="888ca22432babba0581ef0556cce0f6d" name="markerclusterer.js" role="mage" />
+    </dir> <!-- /js/map -->
+   </dir> <!-- /js -->
+   <dir name="modules">
+    <file md5sum="830c817474800247b94067a37c0dcb94" name="Pz_WorldMap.xml" role="mageetc" />
+   </dir> <!-- /modules -->
+   <dir name="PEAR">
+    <dir name="Net">
+     <dir name="GeoIP">
+      <file md5sum="3041b17a8aab69ec3b63c017f1a0432d" name="DMA.php" role="magelib" />
+      <file md5sum="ddb36e4e7cacc2a50b67192a0eb79663" name="Location.php" role="magelib" />
+     </dir> <!-- /PEAR/Net/GeoIP -->
+     <file md5sum="e7bec2e088af4b24a27864f50a473b88" name="GeoIP.php" role="magelib" />
+    </dir> <!-- /PEAR/Net -->
+    <dir name="PEAR">
+     <file md5sum="f364e75223744d460a6bb08420ac94f9" name="Exception.php" role="magelib" />
+    </dir> <!-- /PEAR/PEAR -->
+   </dir> <!-- /PEAR -->
+   <dir name="Pz">
+    <dir name="WorldMap\Block">
+     <file md5sum="98cb18aa80b6e1addee1e09208baa1b6" name="Links.php" role="magecommunity" />
+     <file md5sum="3d6d9a2344325adad25470fbfa92f30a" name="Map.php" role="magecommunity" />
+     <file md5sum="891861764c00906bce6880f877dc901f" name="Online.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Block -->
+    <dir name="WorldMap\Block\Adminhtml\Online">
+     <file md5sum="d5b84909747d829fb70f166ffa70ac0e" name="Tabs.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Block\Adminhtml\Online -->
+    <dir name="WorldMap\Block\Adminhtml\Online\Map">
+     <file md5sum="3821ff82dd0e2037ffed5b1f482e7e9c" name="Geomap.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Block\Adminhtml\Online\Map -->
+    <dir name="WorldMap\Block\Adminhtml\Widget\Map">
+     <file md5sum="d3c9eba22a61d6042755ce52142a2566" name="Selector.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Block\Adminhtml\Widget\Map -->
+    <dir name="WorldMap\Block\Adminhtml\Widget\Marker">
+     <file md5sum="7f6e16e50100c6936206c53c02c34b41" name="Chooser.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Block\Adminhtml\Widget\Marker -->
+    <dir name="WorldMap\Block\Map">
+     <file md5sum="bbed01efc8f7c82edd64a8d15f6395c3" name="Abstract.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Block\Map -->
+    <dir name="WorldMap\controllers">
+     <file md5sum="5c607322b69e192c96e366d2682fae71" name="IndexController.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\controllers -->
+    <dir name="WorldMap\controllers\Adminhtml\Worldmap">
+     <file md5sum="fc0d374330e9291f7f708e4e5204db20" name="OnlineController.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\controllers\Adminhtml\Worldmap -->
+    <dir name="WorldMap\etc">
+     <file md5sum="7e3274c2487c9f49fc6cb1a056342ff4" name="adminhtml.xml" role="magecommunity" />
+     <file md5sum="f72391ed1ae01659eba01458e434c908" name="config.xml" role="magecommunity" />
+     <file md5sum="eebca351759da13dacd0f15a152768a6" name="system.xml" role="magecommunity" />
+     <file md5sum="61a72497df972e2009df7b56b84e449e" name="widget.xml" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\etc -->
+    <dir name="WorldMap\Helper">
+     <file md5sum="cb91df6e8ce5572afc3170908cec2710" name="Data.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Helper -->
+    <dir name="WorldMap\Model">
+     <file md5sum="643cf8525a9e9af7531cccf2011cd881" name="Ip.php" role="magecommunity" />
+     <file md5sum="dd9e9487d5d17a4ade1c5784e20b2601" name="Observe.php" role="magecommunity" />
+     <file md5sum="65ab2dc020e82ab51dc19d5f6a9519f5" name="Visitor.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Model -->
+    <dir name="WorldMap\Model\Entity">
+     <file md5sum="5a8ce3adef8cf0389c16d9bae073e1a8" name="Setup.php" role="magecommunity" />
+     <file md5sum="8e17410114896ad10bc9a0c1e8bb3518" name="Visitor.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Model\Entity -->
+    <dir name="WorldMap\Model\Entity\Visitor">
+     <file md5sum="c38d1dd15e4b63fbc45696c8e80f741a" name="Online.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Model\Entity\Visitor -->
+    <dir name="WorldMap\Model\System\Config\Source">
+     <file md5sum="4f4f07e53521b7a7e408c67a912346f0" name="Region.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\Model\System\Config\Source -->
+    <dir name="WorldMap\sql\worldmap_setup">
+     <file md5sum="1228c98bf7b826922f62892bb87e46c8" name="mysql4-install-0.1.0.php" role="magecommunity" />
+     <file md5sum="db893e0bd0fd8cf1ac21d7af923c8d02" name="mysql4-upgrade-0.1.0-0.8.0.php" role="magecommunity" />
+     <file md5sum="a6639ea73faf46ddad49316969373248" name="mysql4-upgrade-0.9.6-1.0.0.php" role="magecommunity" />
+    </dir> <!-- /Pz/WorldMap\sql\worldmap_setup -->
+   </dir> <!-- /Pz -->
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2</min>
+    <max>6.0</max>
+   </php>
+   <pearinstaller>
+    <min>1.6.2</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+</package>
