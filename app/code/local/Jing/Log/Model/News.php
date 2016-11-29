@@ -12,6 +12,12 @@ class Jing_Log_Model_News extends Mage_Core_Model_Abstract
         parent::_construct();
         $this->_init('log/log');
     }
+
+    public function getActiveNews()
+    {
+        return $this->_getResource()->getActiveNews();
+    }
+
     public function getLog()
     {
         return $this->getResource()->getLog();
